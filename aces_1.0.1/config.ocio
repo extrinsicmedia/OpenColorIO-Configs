@@ -21,8 +21,8 @@ roles:
 
 displays:
   ACES:
-    - !<View> {name: sRGB D60 sim., colorspace: Output - sRGB (D60 sim.)}
     - !<View> {name: DCDM, colorspace: Output - DCDM}
+    - !<View> {name: sRGB D60 sim., colorspace: Output - sRGB (D60 sim.)}
     - !<View> {name: DCDM P3 gamut clip, colorspace: Output - DCDM (P3 gamut clip)}
     - !<View> {name: P3-D60, colorspace: Output - P3-D60}
     - !<View> {name: P3-D60 ST2084 1000 nits, colorspace: Output - P3-D60 ST2084 (1000 nits)}
@@ -37,7 +37,7 @@ displays:
     - !<View> {name: Log, colorspace: ACES - ACEScc}
 
 active_displays: [ACES]
-active_views: [sRGB D60 sim., DCDM, DCDM P3 gamut clip, P3-D60, P3-D60 ST2084 1000 nits, P3-D60 ST2084 2000 nits, P3-D60 ST2084 4000 nits, P3-DCI, Rec.2020, Rec.2020 ST2084 1000 nits, Rec.709, Rec.709 D60 sim., Raw, Log]
+active_views: [DCDM, sRGB D60 sim., DCDM P3 gamut clip, P3-D60, P3-D60 ST2084 1000 nits, P3-D60 ST2084 2000 nits, P3-D60 ST2084 4000 nits, P3-DCI, Rec.2020, Rec.2020 ST2084 1000 nits, Rec.709, Rec.709 D60 sim., Raw, Log]
 
 colorspaces:
   - !<ColorSpace>
