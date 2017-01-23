@@ -21,14 +21,14 @@ displays:
     - !<View> {name: Log, colorspace: lg10}
     - !<View> {name: Raw, colorspace: nc10}
   sRGB:
+    - !<View> {name: Fuji3519, colorspace: fuji3519}
     - !<View> {name: Film, colorspace: srgb8}
     - !<View> {name: Log, colorspace: lg10}
     - !<View> {name: Raw, colorspace: nc10}
-    - !<View> {name: Fuji3519, colorspace: fuji3519}
-    - !<View> {name: None, colorspace: linear}
+    - !<View> {name: None, colorspace: lnf}
 
-active_displays: [sRGB, DCIP3]
-active_views: [Film, Log, Raw]
+active_displays: [sRGB]
+active_views: [Fuji3519]
 
 colorspaces:
   - !<ColorSpace>
@@ -284,4 +284,4 @@ colorspaces:
     from_reference: !<GroupTransform>
       children:
         - !<ColorSpaceTransform> {src: lnf, dst: lg10}
-        - !<FileTransform> {src: "${LUTS}/fin_fuji3519.3dl", interpolation: linear}
+        - !<FileTransform> {src: "${JOB_SERVER}/${JOB}/assets/luts/fuji3519.3dl", interpolation: linear}
